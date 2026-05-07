@@ -5,7 +5,7 @@ def validate_non_negative(value):
     return True 
  
 def validate_percentage(value):
-    if(value < 0 or value > 100):
+    if not isinstance(value, int) or value < 0 or value > 100:
         raise ValueError("Please enter a number between 0-100")
     
     return True
